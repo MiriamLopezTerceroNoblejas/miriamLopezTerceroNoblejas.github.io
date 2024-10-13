@@ -1,0 +1,359 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    background: linear-gradient(135deg, #0d1b2a, #00aaff);
+    color: #e5e5e5;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+
+    
+}
+
+
+/* Estilo para el encabezado y navegación */
+header {
+    position: relative; /* Permite que los elementos dentro se posicionen en relación con este contenedor */
+}
+
+nav {
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo semitransparente */
+    position: absolute; /* Inicialmente se posiciona en el encabezado */
+    top: 20px; /* Ajusta según sea necesario */
+    left: 0; /* Posición a la izquierda */
+    width: 100%; /* Ancho completo */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para efecto visual */
+    padding: 10px 0; /* Espaciado vertical */
+}
+
+.hero {
+    padding-top: 80px; /* Espaciado superior para que la foto y texto no queden pegados al menú */
+}
+
+nav ul {
+    list-style-type: none; /* Sin viñetas */
+    padding: 0; /* Sin padding */
+    margin: 0; /* Sin margen */
+    display: flex; /* Distribución en línea */
+    justify-content: center; /* Centrar elementos */
+}
+
+nav li {
+    margin: 0 15px; /* Espacio entre elementos */
+}
+
+nav a {
+    text-decoration: none; /* Sin subrayado */
+    color: #333; /* Color del texto */
+    font-weight: bold; /* Negrita */
+    transition: color 0.3s; /* Transición suave para el hover */
+    padding: 5px 10px; /* Espaciado interno de los enlaces */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+nav a:hover {
+    color: #007bff; /* Color al pasar el mouse */
+    background-color: rgba(0, 123, 255, 0.1); /* Fondo al hacer hover */
+}
+
+/* Estilo adicional para el menú cuando se hace scroll */
+.scrolled nav {
+    position: fixed; /* Cambiar a fijo al hacer scroll */
+    top: 0; /* Mantener en la parte superior */
+    margin-top: 0; /* Sin margen superior */
+}
+
+
+
+
+/* Sección Hero */
+.hero {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #0d1b2a;
+    color: white;
+}
+
+.photo {
+    margin-right: 2rem;
+}
+
+.photo img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    border: 4px solid #00aaff;
+    transition: transform 0.3s ease-in-out;
+}
+
+.photo img:hover {
+    transform: scale(1.1);
+}
+
+.hero-text {
+    max-width: 600px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    color: #00aaff;
+}
+
+.hero-text p {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.hero-text:hover {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.btn {
+    background: #00aaff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 1rem;
+    transition: background 0.3s, box-shadow 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: #0077cc;
+    box-shadow: 0px 4px 15px rgba(0, 170, 255, 0.6);
+}
+
+/* Secciones */
+section {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 2rem auto;
+    background-color: #2a2a2a;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+section:hover {
+    transform: translateY(-10px);
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #0d1b2a;
+    color: #e5e5e5;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 3rem;
+}
+
+/* Sección About */
+#about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#about h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+/* Estilos de contacto */
+.contact-section {
+    margin-bottom: 2rem;
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.email-link {
+    color: #00aaff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.email-link:hover {
+    color: #0077cc;
+}
+
+.social-media {
+    list-style: none;
+    padding: 0;
+}
+
+.social-media ul {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icon {
+    width: 24px; /* Ajusta el tamaño de los iconos */
+    vertical-align: middle;
+}
+
+/* Estilos de la sección Skills */
+#skills {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 2rem auto;
+    background-color: #2a2a2a; /* Color de fondo de la sección */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+#skills:hover {
+    transform: translateY(-10px); /* Elevar ligeramente la sección al hacer hover */
+}
+
+/* Títulos de la sección Skills */
+#skills h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #ffffff; /* Color azul */
+}
+
+#titulo h3 {
+    font-size: 2rem; /* Tamaño más grande para los títulos de subsección */
+    margin-bottom: 1rem;
+    color: #00aaff; /* Color azul */
+}
+
+
+#skills h4 {
+    font-size: 1.6rem; /* Aumentamos el tamaño */
+    margin-bottom: 0.5rem;
+    color: #0077cc; /* Color un poco más oscuro que los otros títulos */
+    font-weight: bold; /* Hacerlo en negrita para mayor visibilidad */
+    text-transform: uppercase; /* Poner en mayúsculas para mayor impacto */
+    border-bottom: 2px solid #00aaff; /* Línea azul debajo del título */
+    padding-bottom: 0.2rem;
+}
+
+/* Asegurar que las imágenes y los títulos de las tarjetas se ajusten al tamaño de la tarjeta */
+.profile-card img {
+    width: 80px; /* Ajusta el tamaño de la imagen */
+    height: 80px; /* Cambia a un tamaño más pequeño */
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+}
+
+/* Asegurar que el texto de las tarjetas de habilidades esté en blanco y se ajuste sin romper palabras */
+.profile-card h3, .profile-card p {
+    font-size: 1rem; /* Ajustar el tamaño del texto */
+    color: #ffffff; /* Cambia el color del texto a blanco */
+    white-space: normal; /* Permitir que el texto ocupe varias líneas */
+    word-wrap: normal; /* Evitar la ruptura forzada de palabras */
+    overflow-wrap: break-word; /* Rompe solo si la palabra es muy larga */
+    hyphens: auto; /* Habilitar guiones automáticos si es necesario */
+    margin-top: 0.5rem;
+}
+
+/* Estilo de las tarjetas con interactividad */
+.profile-card {
+    background-color: #2a2a2a; /* Color de fondo */
+    border: 2px solid #00aaff; /* Borde azul */
+    border-radius: 10px;
+    padding: 1rem; /* Padding interno */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto de hover */
+}
+
+/* Mantener el efecto hover */
+.profile-card:hover {
+    transform: translateY(-10px); /* Elevar ligeramente la tarjeta al hacer hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra al hacer hover */
+}
+
+/* Distribución de las tarjetas */
+.profile-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    margin-top: 2rem;
+}
+
+/* Sección Formación */
+#formacion h2 {
+    font-size: 2.5rem; /* Tamaño del título principal "Formación" */
+    margin-bottom: 1rem;
+}
+
+#formacion h3 {
+    font-size: 1.8rem; /* Título "Formación Oficial", más pequeño que "Formación" */
+    margin-bottom: 0.5rem;
+    color: #00aaff; /* Mantiene el color azul */
+}
+
+#formacion li {
+    font-size: 1.2rem; /* Texto de "Bachillerato LOMCE", más pequeño que el título */
+    margin-bottom: 0.8rem;
+}
+
+.years-box {
+    background-color: #1a1a1a; /* Fondo oscuro para el cuadro de años */
+    border: 1px solid #00aaff; /* Borde azul */
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 1rem;
+    margin-left: 10px;
+}
+
+.enseñanza-link {
+    font-size: 1rem;
+    margin-left: 10px;
+    color: #00aaff; /* Color del enlace */
+    text-decoration: none;
+    border-bottom: 1px solid transparent; /* Añade una línea sutil bajo el enlace */
+    transition: border-bottom 0.3s ease; /* Transición suave */
+}
+
+.instituto-link:hover {
+    border-bottom: 1px solid #00aaff; /* Línea azul al pasar el ratón */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .photo {
+        margin-bottom: 2rem; /* Ajustar el margen */
+    }
+
+    .profile-card {
+        width: 100%; /* Asegurar que las tarjetas ocupen el 100% en móviles */
+    }
+
+    nav ul {
+        flex-direction: column; /* Cambiar a columna para pantallas pequeñas */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Ajustar el margen */
+    }
+
+    #skills h2, #about h2, #formacion h2 {
+        font-size: 2rem; /* Tamaño más pequeño para títulos en móviles */
+    }
+}
