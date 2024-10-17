@@ -18,55 +18,38 @@ body {
 
 /* Estilo para el encabezado y navegación */
 header {
-    position: relative; /* Permite que los elementos dentro se posicionen en relación con este contenedor */
+    background: url('encabezado.gif') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
 }
 
-nav {
-    background-color: rgba(255, 255, 255, 0.9); /* Fondo semitransparente */
-    position: absolute; /* Inicialmente se posiciona en el encabezado */
-    top: 20px; /* Ajusta según sea necesario */
-    left: 0; /* Posición a la izquierda */
-    width: 100%; /* Ancho completo */
-    z-index: 1000; /* Asegura que esté por encima de otros elementos */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para efecto visual */
-    padding: 10px 0; /* Espaciado vertical */
+.navbar {
+    background-color: #0d1b2a; /* Azul oscuro */
+    padding: 1rem;
+    text-align: center;
 }
 
-.hero {
-    padding-top: 80px; /* Espaciado superior para que la foto y texto no queden pegados al menú */
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+
 }
 
-nav ul {
-    list-style-type: none; /* Sin viñetas */
-    padding: 0; /* Sin padding */
-    margin: 0; /* Sin margen */
-    display: flex; /* Distribución en línea */
-    justify-content: center; /* Centrar elementos */
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+
 }
 
-nav li {
-    margin: 0 15px; /* Espacio entre elementos */
-}
+.navbar a:hover {
+    text-decoration: underline;
 
-nav a {
-    text-decoration: none; /* Sin subrayado */
-    color: #333; /* Color del texto */
-    font-weight: bold; /* Negrita */
-    transition: color 0.3s; /* Transición suave para el hover */
-    padding: 5px 10px; /* Espaciado interno de los enlaces */
-    border-radius: 5px; /* Bordes redondeados */
-}
-
-nav a:hover {
-    color: #007bff; /* Color al pasar el mouse */
-    background-color: rgba(0, 123, 255, 0.1); /* Fondo al hacer hover */
-}
-
-/* Estilo adicional para el menú cuando se hace scroll */
-.scrolled nav {
-    position: fixed; /* Cambiar a fijo al hacer scroll */
-    top: 0; /* Mantener en la parte superior */
-    margin-top: 0; /* Sin margen superior */
 }
 
 
@@ -75,13 +58,35 @@ nav a:hover {
 /* Sección Hero */
 .hero {
     display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     padding: 2rem;
-    background-color: #0d1b2a;
     color: white;
 }
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    background-color: #0d1b2a; /* Azul oscuro */
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.hero-image {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 2rem; /* Espacio entre la imagen y el texto */
+}
+
+.hero-text {
+    text-align: left;
+}
+
+h1, p {
+    margin: 0;
+}
+
 
 .photo {
     margin-right: 2rem;
@@ -172,40 +177,64 @@ footer {
     margin-bottom: 1rem;
 }
 
-/* Estilos de contacto */
+/* Estilos de contacto */ 
 .contact-section {
-    margin-bottom: 2rem;
+    background-color: #1a1a1a; /* Azul oscuro de fondo */
+    padding: 3rem;
+    text-align: left;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 170, 255, 0.5); /* Sombra para resaltar la sección */
+    
 }
 
 .contact-section h2 {
+    color: #e5e5e5; /* Color azul cian para el título */
     font-size: 2.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
 }
 
+.contact-section p {
+    font-size: 1.2rem;
+    color: #e5e5e5;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+/* Enlace de correo estilizado */
 .email-link {
     color: #00aaff;
+    font-size: 1.5rem;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s ease;
+    background-color: #0d1b2a;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .email-link:hover {
-    color: #0077cc;
+    background-color: #0077cc;
+    box-shadow: 0px 4px 15px rgba(0, 170, 255, 0.6); /* Efecto hover con sombra */
 }
 
+/* Iconos de redes sociales */
 .social-media {
-    list-style: none;
-    padding: 0;
-}
-
-.social-media ul {
     display: flex;
-    gap: 20px;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 2rem;
 }
 
 .social-icon {
-    width: 24px; /* Ajusta el tamaño de los iconos */
-    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2); /* Efecto de zoom al hacer hover */
+    box-shadow: 0px 4px 15px rgba(0, 170, 255, 0.6); /* Sombra alrededor del icono */
 }
 
 /* Estilos de la sección Skills */
@@ -357,3 +386,22 @@ footer {
         font-size: 2rem; /* Tamaño más pequeño para títulos en móviles */
     }
 }
+
+.honor-box {
+    display: inline-block;
+    color: white;
+    font-size: 0.9rem;
+    padding: 4px 8px;
+    margin-left: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 2px solid #00aaff; /* Borde azul */
+    transition: transform 0.3s ease, border-color 0.3s ease; /* Transición para la animación */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+.honor-box:hover {
+    transform: scale(1.05); /* Efecto de hover: ligeramente más grande */
+    border-color: #0077cc; /* Borde azul más brillante al pasar el ratón */
+}
+

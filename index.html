@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portafolio profesional de [Tu Nombre], desarrolladora informática">
-    <title>Portafolio - [Tu Nombre]</title>
+    <meta name="description" content="Portafolio profesional de [Miriam López-Tercero Noblejas], desarrolladora informática">
+    <title>Portafolio - [Miriam López-Tercero Noblejas]</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="navbar">
             <ul>
                 <li><a href="#about">Sobre mí</a></li>
                 <li><a href="#formacion">Formación</a></li> 
@@ -21,13 +21,16 @@
             </ul>
         </nav>
         <div class="hero">
-            <div class="photo">
-                <img src="foto_recortada.jpeg" alt="Foto de Miriam">
-            </div>
-            <div class="hero-text" data-aos="fade-right">
-                <h1>¡Hola! Soy Miriam López-Tercero Noblejas</h1>
-                <p>Ingeniería Informática | Tecnologías de la Información</p>
-                <a href="#projects" class="btn">Mis Proyectos</a>
+            <div class="hero-content">
+
+                <div class="photo">
+                    <img src="foto_recortada.jpeg" alt="Foto de Miriam" class="hero-image">
+                </div>
+                <div class="hero-text" data-aos="fade-right">
+                    <h1>¡Hola! Soy Miriam López-Tercero Noblejas</h1>
+                    <p>Ingeniería Informática | Tecnologías de la Información</p>
+                    <a href="#projects" class="btn">Mi Curriculum</a>
+                </div>
             </div>
         </div>
     </header>
@@ -38,8 +41,7 @@
         <h2>Sobre mí</h2>
         <p>Soy Miriam López-Tercero Noblejas, estudiante del grado de Ingeniería Informática en la Escuela Superior de Informática. Desde pequeña, siempre me ha llamado la atención todo lo relacionado con la tecnología, intentando entender cómo funcionaba todo.</p>
         <p>Me considero una persona trabajadora y curiosa, siempre intentando dar lo mejor de mí y aprender todo lo posible.</p>
-        <p>Me encantaría trabajar en una empresa donde pueda dar todo de mí y conseguir desarrollar mi potencial a la vez que sigo desarrollándome como profesional.</p>
-        <a href="#contact" class="btn">Contacta conmigo</a>
+        <p>Me encantaría trabajar en una empresa donde pueda aprender y conseguir desarrollar mi potencial a la vez que sigo desarrollándome como profesional.</p>
         <p> Los perfiles que más me llaman la atención son:</p>
         <div class="profile-cards">
             <div class="profile-card">
@@ -77,8 +79,11 @@
             <li>
                 <span>Ingeniería Informática</span>
                 <span class="years-box">2021 - 2025 </span>
-                <a href="https://esi.uclm.es/" target="_blank" class="enseñanza-link">Escuela Superior de Informática (ESI) </a> <span>Ciudad Real</span>
+                <a href="https://esi.uclm.es/" target="_blank" class="enseñanza-link">Escuela Superior de Informática (ESI) </a>
+                <span>Ciudad Real</span>
+                <span class="honor-box">Matrícula de Honor en Aspectos Profesionales de la Informática</span> <!-- Añadimos el cuadro de la mención -->
             </li>
+            
             <h3>Formación Complementaria</h3>
             <li>
                 <span>Gestión de Proyectos y Fundamentos de metodología Agile</span>
@@ -104,7 +109,7 @@
                 <span>Comunicación Efectiva</span>
                 <a href="https://www.santanderopenacademy.com/es/user/index.html" target="_blank" class="enseñanza-link">Santander Open Academy</a> <span>Online</span>
             </li>
-            <h3>Acreditaciones</h3>
+            <h3>Idiomas</h3>
             <li>
                 <span>Acreditación B1 en Inglés</span> 
                 <a href="https://www.trinitycollege.com/local-trinity/spain" target="_blank" class="enseñanza-link">Trinity College London</a> 
@@ -112,7 +117,7 @@
         </ul>
     </section>
     
-    <section id="skills" data-aos="fade-left">
+    <section id="skills" data-aos="fade-right">
         <h2>Habilidades</h2>
         <ul>
             <h4>Habilidades técnicas</h4>
@@ -188,37 +193,24 @@
         </ul>
     </section>
 
-    <section id="projects" data-aos="fade-left">
+    <section id="projects" data-aos="fade-right">
         <h2>Proyectos</h2>
         <ul>
             
         </ul>
     </section>
 
-    <section id="contact" data-aos="fade-right">
+    <section id="contact" class="contact-section" data-aos="fade-left">
         <h2>Contacto</h2>
-        <div class="contact-section">
-            <h3>Correo Electrónico
-                <img src="correo.png" class="social-icon">
-            </h3>
-            <p><a href="mailto:tuemail@example.com" class="email-link">miriamltn12@gmail.com</a></p>
-        </div>
-        <div class="social-media">
-            <h3>Redes Sociales</h3>
-            <ul>
-                <li>
-                    <a href="https://www.linkedin.com/in/miriam-l%C3%B3pez-tercero-noblejas-0891a5308/" target="_blank">
-                        <img src="linkedin.png" alt=" LinkedIn" class="social-icon">LinkedIn
-                    </a>
-                </li>
-                <li>
-                    <a href="https://github.com/MiriamLopezTerceroNoblejas" target="_blank">
-                        <img src="github.png" alt="GitHub" class="social-icon">GitHub
-                    </a>
-                </li>
-            </ul>
-        </div>
+        <p>Si tienes algún proyecto interesante o quieres hablar conmigo, ¡no dudes en contactarme!</p>
+        <a href="mailto:miriamltn12@gmail.com" class="email-link">Envíame un correo</a>
+    
+        <ul class="social-media">
+            <li><a href="https://www.linkedin.com/in/miriam-l%C3%B3pez-tercero-noblejas-0891a5308/"><img src="github.png" alt="GitHub" class="social-icon"></a></li>
+            <li><a href="https://github.com/MiriamLopezTerceroNoblejas"><img src="linkedin.png" alt="LinkedIn" class="social-icon"></a></li>
+        </ul>
     </section>
+    
 
     <footer>
         <p>&copy; 2024 Miriam López-Tercero Noblejas. Todos los derechos reservados.</p>
