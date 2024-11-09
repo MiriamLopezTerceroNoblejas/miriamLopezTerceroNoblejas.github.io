@@ -405,3 +405,186 @@ footer {
     border-color: #0077cc; /* Borde azul más brillante al pasar el ratón */
 }
 
+
+
+
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+#projects {
+    padding: 20px;
+}
+
+.project-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project-card {
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+}
+
+.project-card img {
+    width: 100%;
+    height: 300px;
+}
+
+.details-button,
+.github-button,
+.download-button {
+    margin: 10px 0;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-toggle {
+    display: none;
+}
+
+.modal-toggle:checked + .modal {
+    display: block;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #444;
+    margin: 2% auto;
+    padding: 20px;
+    width: 95%;
+    max-width: 1400px;
+    border-radius: 8px;
+    display: flex;
+    color: #fff;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    flex: 3;
+    margin-right: 20px;
+    height: 600px; /* Aumenta la altura del carrusel para más espacio */
+
+}
+
+.carousel-images {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.carousel-images .image {
+    min-width: 100%; /* Asegura que solo se vea una imagen a la vez en el carrusel */
+    height: 560px; /* Ajusta esta altura según prefieras */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.carousel-images .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Hace que la imagen se adapte sin distorsión */
+}
+
+
+
+input[type="radio"] {
+    display: none;
+}
+
+/* Configuración de la navegación de imágenes */
+input[type="radio"]:nth-of-type(1):checked ~ .carousel-images {
+    transform: translateX(0);
+}
+
+input[type="radio"]:nth-of-type(2):checked ~ .carousel-images {
+    transform: translateX(-100%);
+}
+
+input[type="radio"]:nth-of-type(3):checked ~ .carousel-images {
+    transform: translateX(-200%);
+}
+
+input[type="radio"]:nth-of-type(4):checked ~ .carousel-images {
+    transform: translateX(-300%);
+}
+
+input[type="radio"]:nth-of-type(5):checked ~ .carousel-images {
+    transform: translateX(-400%);
+}
+
+input[type="radio"]:nth-of-type(6):checked ~ .carousel-images {
+    transform: translateX(-500%);
+}
+
+input[type="radio"]:nth-of-type(7):checked ~ .carousel-images {
+    transform: translateX(-600%);
+}
+
+/* Indicadores del carrusel */
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+    gap: 8px;
+}
+
+.indicator {
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    background-color: #ccc;
+    border-radius: 50%;
+}
+
+input[type="radio"]:nth-of-type(1):checked ~ .carousel-indicators label:nth-of-type(1),
+input[type="radio"]:nth-of-type(2):checked ~ .carousel-indicators label:nth-of-type(2),
+input[type="radio"]:nth-of-type(3):checked ~ .carousel-indicators label:nth-of-type(3),
+input[type="radio"]:nth-of-type(4):checked ~ .carousel-indicators label:nth-of-type(4),
+input[type="radio"]:nth-of-type(5):checked ~ .carousel-indicators label:nth-of-type(5),
+input[type="radio"]:nth-of-type(6):checked ~ .carousel-indicators label:nth-of-type(6),
+input[type="radio"]:nth-of-type(7):checked ~ .carousel-indicators label:nth-of-type(7) {
+    background-color: #4CAF50; /* Color del círculo activo */
+    box-shadow: 0 0 5px #4CAF50, 0 0 10px #4CAF50; /* Efecto de iluminación */
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.project-description {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    max-height: 400px;
+    margin-left: 20px;
+}

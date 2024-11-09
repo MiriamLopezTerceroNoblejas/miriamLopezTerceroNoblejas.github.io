@@ -193,12 +193,98 @@
         </ul>
     </section>
 
-    <section id="projects" data-aos="fade-right">
-        <h2>Proyectos</h2>
-        <ul>
-            
-        </ul>
-    </section>
+
+
+
+    
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mi Portafolio</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <section id="projects">
+            <h2>Mis Proyectos</h2>
+            <div class="project-cards">
+                <div class="project-card">
+                    <img src="proyecto1.jpg" alt="Proyecto 1">
+                    <h3>Proyecto 1</h3>
+                    <label for="modal-toggle-1" class="details-button">Ver detalles</label>
+                    <button class="github-button">Ver en GitHub</button>
+                    <button class="download-button">Descargar</button>
+                </div>
+                <div class="project-card">
+                    <img src="proyecto2.jpg" alt="Proyecto 2">
+                    <h3>Proyecto 2</h3>
+                    <label for="modal-toggle-2" class="details-button">Ver detalles</label>
+                    <button class="github-button">Ver en GitHub</button>
+                    <button class="download-button">Descargar</button>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Modal para el Proyecto 1 -->
+        <input type="checkbox" id="modal-toggle-1" class="modal-toggle">
+        <div class="modal">
+            <div class="modal-content">
+                <label for="modal-toggle-1" class="close">&times;</label>
+                <div class="carousel">
+                    <!-- Indicadores de imagen -->
+                    <div class="carousel-indicators">
+                        <label for="image1" class="indicator active"></label>
+                        <label for="image2" class="indicator"></label>
+                        <label for="image3" class="indicator"></label>
+                        <label for="image4" class="indicator"></label>
+                        <label for="image5" class="indicator"></label>
+                        <label for="image6" class="indicator"></label>
+                        <label for="image7" class="indicator"></label>
+                    </div>
+    
+                    <!-- Imágenes del carrusel -->
+                    <input type="radio" name="carousel" id="image1" checked>
+                    <input type="radio" name="carousel" id="image2">
+                    <input type="radio" name="carousel" id="image3">
+                    <input type="radio" name="carousel" id="image4">
+                    <input type="radio" name="carousel" id="image5">
+                    <input type="radio" name="carousel" id="image6">
+                    <input type="radio" name="carousel" id="image7">
+    
+                    <div class="carousel-images">
+                        <div class="image"><img src="portfolio/alzheimer/portada.png" alt="Portada"></div>
+                        <div class="image"><img src="portfolio/alzheimer/informacion.png" alt="Pestaña Información"></div>
+                        <div class="image"><img src="portfolio/alzheimer/recursos.png" alt="Pestaña Recursos"></div>
+                        <div class="image"><img src="portfolio/alzheimer/simonDice.png" alt="Juego Simón Dice"></div>
+                        <div class="image"><img src="portfolio/alzheimer/preguntas_respuestas.png" alt="Juego Preguntas y Respuestas"></div>
+                        <div class="image"><img src="portfolio/alzheimer/ecnontrar_parejas.png" alt="Juego Encontrar Parejas"></div>
+                        <div class="image"><img src="portfolio/alzheimer/asocia_la_imagen.png" alt="Juego Asociar la Imagen"></div>
+                    </div>
+                </div>
+                <div class="project-description">
+                    <p>Aquí va la descripción del Proyecto 1. Agrega más detalles sobre el proyecto en esta sección.</p>
+                </div>
+            </div>
+        </div>
+    
+        <script src="script.js"></script>
+    </body>
+    </html>
+    
+    
+
+
+    
+    
+
+
+
+
+
+
+
+
 
     <section id="contact" class="contact-section" data-aos="fade-left">
         <h2>Contacto</h2>
