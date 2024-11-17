@@ -217,10 +217,10 @@
                 </div>
                 
                 <div class="project-card m2">
-                    <img src="proyecto2.jpg" alt="Proyecto 2">
+                    <img src="portfolio/beatmxer/logo.png" alt="Proyecto 2">
                     <h3>BeatMixer </h3>
                     <label for="modal-toggle-2" class=" btn details-button">Ver detalles</label>
-                    <a href="" target="_blank" class="btn github-button">Ver en GitHub</a>
+                    <a href="https://github.com/Enriquesmo/ISI-BeatMixer.git" target="_blank" class="btn github-button">Ver en GitHub</a>
                 </div>
             </div>
         </section>
@@ -256,35 +256,78 @@
     </div>
 </div>
 
+
+<!-- Modal para el Proyecto 2 -->
+<input type="checkbox" id="modal-toggle-2" class="modal-toggle">
+<div class="modal">
+    <div class="modal-content">
+        <label for="modal-toggle-2" class="close">&times;</label>
+        <div class="carousel">
+            <!-- Botones de navegación -->
+            <button class="carousel-button prev-button">&larr; Anterior</button>
+            <div class="carousel-images">
+                <div class="image"><img src="portfolio/beatmxer/inicio_sesion.png" alt="Portada"></div>
+                <div class="image"><img src="portfolio/beatmxer/registro.png" alt="Pestaña Información"></div>
+                <div class="image"><img src="portfolio/beatmxer/registro_premium.png" alt="Pestaña Recursos"></div>
+                <div class="image"><img src="portfolio/beatmxer/spotify.png" alt="Juego Simón Dice"></div>
+                <div class="image"><img src="portfolio/beatmxer/ventana_principal.png" alt="Juego Preguntas y Respuestas"></div>
+                <div class="image"><img src="portfolio/beatmxer/detalles_playlist.png" alt="Juego Encontrar Parejas"></div>
+                <div class="image"><img src="portfolio/beatmxer/pdf.png" alt="Juego Asociar la Imagen"></div>
+                <div class="image"><img src="portfolio/beatmxer/playlist_creada.png" alt="Juego Asociar la Imagen"></div>
+                <div class="image"><img src="portfolio/beatmxer/visualizar_playlist.png" alt="Juego Asociar la Imagen"></div>
+
+            </div>
+            <button class="carousel-button next-button">Siguiente &rarr;</button>
+        </div>
+        <div class="project-description">
+            <p><strong>Nombre:</strong> BeatMixer</p>
+            <p><strong>Asignatura:</strong> Integración de Sistemas Informáticos</p>
+            <p><strong>Grupo:</strong> 3 Persona</p>
+            <p><strong>Descripción</strong> BeatMixer es una web cuya función es integrar las APIs de dos grandes servicios de música como son Spotify y Deezer. 
+            En nuestra web, el usuario debe registrarse (con servicio gratuito o premium) e iniciar sesión. Una vez dentro, podrá filtrar canciones en función de 
+            artistas, fecha de canción o género y pondrá un nombre a la playlist y el número de canciones que deseaa por filtro. Con estos datos, se creará una playlist 
+            en función de los gustos musicales del usuario. Podrá descargar un documento con los datos de la canción, escuchar un adelanto o importarla a su cuenta de Spotify. </p>
+        </div>
+    </div>
+</div>
+
     
     </body>
     </html>
-    <script>
-document.addEventListener('DOMContentLoaded', () => {
-        const prevButton = document.querySelector('.prev-button');
-        const nextButton = document.querySelector('.next-button');
-        const carouselImages = document.querySelector('.carousel-images');
-        const images = document.querySelectorAll('.carousel-images .image');
-        let currentIndex = 0;
     
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    // Seleccionar todos los carruseles
+    const carousels = document.querySelectorAll('.carousel');
+
+    carousels.forEach((carousel) => {
+        const prevButton = carousel.querySelector('.prev-button');
+        const nextButton = carousel.querySelector('.next-button');
+        const carouselImages = carousel.querySelector('.carousel-images');
+        const images = carousel.querySelectorAll('.carousel-images .image');
+        let currentIndex = 0;
+
         function showImage(index) {
             const offset = -index * 100; // Calcula el desplazamiento en porcentaje
             carouselImages.style.transform = `translateX(${offset}%)`;
         }
-    
+
         prevButton.addEventListener('click', () => {
             currentIndex = (currentIndex - 1 + images.length) % images.length; // Retrocede en el índice
             showImage(currentIndex);
         });
-    
+
         nextButton.addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % images.length; // Avanza en el índice
+            currentIndex = (currentIndex + 1) % images.length; // Avanza en el índice, pero vuelve a la primera imagen al llegar al final
             showImage(currentIndex);
         });
-    
+
         // Inicializa mostrando la primera imagen
         showImage(currentIndex);
     });
+});
+
+
     </script>
     
     
