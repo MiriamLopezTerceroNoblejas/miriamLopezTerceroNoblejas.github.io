@@ -216,12 +216,27 @@
                     <a href="https://github.com/Miriamltn/LAB_GSI.git" target="_blank" class="btn github-button">Ver en GitHub</a>
                 </div>
                 
-                <div class="project-card m2">
+                <div class="project-card m2 proyecto-2">
                     <img src="portfolio/beatmxer/logo.png" alt="Proyecto 2">
                     <h3>BeatMixer </h3>
                     <label for="modal-toggle-2" class=" btn details-button">Ver detalles</label>
                     <a href="https://github.com/Enriquesmo/ISI-BeatMixer.git" target="_blank" class="btn github-button">Ver en GitHub</a>
                 </div>
+
+                <div class="project-card m2 proyecto-3">
+                    <img src="portfolio/ISO_2/logoGit.png" alt="Proyecto 3">
+                    <h3>Gestión de proyectos </h3>
+                    <label for="modal-toggle-3" class=" btn details-button">Ver detalles</label>
+                    <a href="https://github.com/Miriamltn/LabBC-G04.git" target="_blank" class="btn github-button">Ver en GitHub</a>
+                </div>
+
+                <div class="project-card m2 proyecto-3">
+                    <img src="portfolio/ISO_2/logoGit.png" alt="Proyecto 3">
+                    <h3>Pokemon Individual </h3>
+                    <label for="modal-toggle-4" class=" btn details-button">Ver detalles</label>
+                    <a href="" target="_blank" class="btn github-button">Ver en GitHub</a>
+                </div>
+
             </div>
         </section>
     
@@ -291,44 +306,137 @@
     </div>
 </div>
 
+<!-- Modal para el Proyecto 3 -->
+<input type="checkbox" id="modal-toggle-3" class="modal-toggle">
+<div class="modal">
+    <div class="modal-content">
+        <label for="modal-toggle-3" class="close">&times;</label>
+        <div class="carousel">
+            <!-- Botones de navegación -->
+            <button class="carousel-button prev-button">&larr; Anterior</button>
+            <div class="carousel-images">
+                <div class="image"><img src="portfolio/ISO_2/Comits.png" alt="Portada"></div>
+                <div class="image"><img src="portfolio/ISO_2/issues.png" alt="Pestaña Información"></div>
+                <div class="image"><img src="portfolio/ISO_2/Wiki.png" alt="Pestaña Recursos"></div>
+                <div class="image"><img src="portfolio/ISO_2/Diario.png" alt="Juego Simón Dice"></div>
+                <div class="image"><img src="portfolio/ISO_2/Tags.png" alt="Juego Preguntas y Respuestas"></div>
+                <div class="image"><img src="portfolio/ISO_2/grafico.png" alt="Juego Encontrar Parejas"></div>
+            </div>
+            <button class="carousel-button next-button">Siguiente &rarr;</button>
+        </div>
+        <div class="project-description">
+            <p><strong>Nombre:</strong> Gestión de Proyectos</p>
+            <p><strong>Asignatura:</strong> Ingeniería del Software 2</p>
+            <p><strong>Grupo:</strong> 6 Persona</p>
+            <p><strong>Descripción</strong> Este proyecto se centró en realizar una planificación y un control de versiones de un proyecto "real" siguiendo una 
+            metodología ágil como Scrum. Había diferentes roles (donde yo ejercía el rol de jefa de grupo). Nos centramos en trabajar en equipo para realizar la 
+            planificación con un calendario, ordenado por sprints y de asignar issues. Además, realizabamos reuniones de grupo que posteriormente quedaban documentadas
+            y se usaban las herramientas de GitHub durante todo el proyecto. </p>
+        </div>
+    </div>
+</div>
+
+ <!-- Modal para el Proyecto 4 -->
+ <input type="checkbox" id="modal-toggle-4" class="modal-toggle">
+ <div class="modal">
+     <div class="modal-content">
+         <label for="modal-toggle-4" class="close">&times;</label>
+         <div class="carousel">
+             <!-- Botones de navegación -->
+             <button class="carousel-button prev-button">&larr; Anterior</button>
+             <div class="carousel-videos">
+                <!-- Video 1 -->
+                <div class="video">
+                    <video autoplay loop muted playsinline>
+                        <source src="portfolio/piplup/ataque 1.mp4" type="video/mp4">
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
+                </div>
+                <!-- Video 2 -->
+                <div class="video">
+                    <video autoplay loop muted playsinline>
+                        <source src="portfolio/piplup/Ataque 2.mp4" type="video/mp4">
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
+                </div>
+                <!-- Video 3 -->
+                <div class="video">
+                    <video autoplay loop muted playsinline>
+                        <source src="portfolio/piplup/Defensa.mp4" type="video/mp4">
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
+                </div>
+            </div>
+             <button class="carousel-button next-button">Siguiente &rarr;</button>
+         </div>
+         <div class="project-description">
+             <p><strong>Nombre:</strong> Pokemon Piplup</p>
+             <p><strong>Asignatura:</strong> Interacción Persona Ordenador 1</p>
+             <p><strong>Grupo:</strong> Individual</p>
+             <p><strong>Descripción</strong> Se desarrolló un proyecto para que sirviera como un sistema de información para enfermos y familiares de personas con Alzheimer.
+             En él se incluyó varias pestañas, en donde se pueden encontrar tanto textos informativos sobre consejos para la enfermedad, enlaces a otras plataformas como Youtube
+             para ver videos o webs para comprar libros como una serie de juegos para que las personas que padezcan dicha enfermedad puedan entrenar su memoria como Simón Dice, juegos
+             de hacer parejas, de reconocer imágenes o de cultura general.</p>
+         </div>
+     </div>
+ </div>
+
+
+
     
     </body>
     </html>
-    
     <script>
-    document.addEventListener('DOMContentLoaded', () => {
+        document.addEventListener('DOMContentLoaded', () => {
     // Seleccionar todos los carruseles
     const carousels = document.querySelectorAll('.carousel');
 
     carousels.forEach((carousel) => {
         const prevButton = carousel.querySelector('.prev-button');
         const nextButton = carousel.querySelector('.next-button');
-        const carouselImages = carousel.querySelector('.carousel-images');
-        const images = carousel.querySelectorAll('.carousel-images .image');
+
+        // Determinar si es un carrusel de imágenes o videos
+        const carouselContent = carousel.querySelector('.carousel-images, .carousel-videos');
+        const items = carousel.querySelectorAll('.image, .video');
         let currentIndex = 0;
 
-        function showImage(index) {
+        function showItem(index) {
             const offset = -index * 100; // Calcula el desplazamiento en porcentaje
-            carouselImages.style.transform = `translateX(${offset}%)`;
+            carouselContent.style.transform = `translateX(${offset}%)`;
+
+            // Pausar todos los videos si es un carrusel de videos
+            if (carouselContent.classList.contains('carousel-videos')) {
+                items.forEach((item, idx) => {
+                    const video = item.querySelector('video');
+                    if (video) {
+                        if (idx === index) {
+                            video.play(); // Reproduce el video visible
+                        } else {
+                            video.pause(); // Pausa los demás videos
+                            video.currentTime = 0; // Reinicia los videos no visibles
+                        }
+                    }
+                });
+            }
         }
 
         prevButton.addEventListener('click', () => {
-            currentIndex = (currentIndex - 1 + images.length) % images.length; // Retrocede en el índice
-            showImage(currentIndex);
+            currentIndex = (currentIndex - 1 + items.length) % items.length; // Retrocede en el índice
+            showItem(currentIndex);
         });
 
         nextButton.addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % images.length; // Avanza en el índice, pero vuelve a la primera imagen al llegar al final
-            showImage(currentIndex);
+            currentIndex = (currentIndex + 1) % items.length; // Avanza en el índice
+            showItem(currentIndex);
         });
 
-        // Inicializa mostrando la primera imagen
-        showImage(currentIndex);
+        // Inicializa mostrando el primer elemento
+        showItem(currentIndex);
     });
 });
 
-
-    </script>
+        </script>
+        
     
     
     

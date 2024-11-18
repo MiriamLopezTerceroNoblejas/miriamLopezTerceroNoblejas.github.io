@@ -447,12 +447,19 @@ body {
     user-select: none;
   }
   
-  .project-card.m2 img {
+  .project-card.m2.proyecto-2 img {
     width: 50%; /* Tamaño reducido de la imagen */
     height: auto;
     border-radius: 5px;
     margin-bottom: 1rem;
   }
+
+  .project-card.m2.proyecto-3 img {
+    width: 20%; /* Tamaño de la imagen del Proyecto 3 */
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
   
   .project-card.m2 h3.logo {
     font-size: 2rem; /* Ajusta el tamaño del título */
@@ -592,6 +599,13 @@ body {
     transition: transform 0.5s ease;
 }
 
+.carousel-videos {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%; /* Asegura que ocupe el 100% del carrusel */
+    overflow: hidden;
+}
+
 .carousel-images .image {
     min-width: 100%; /* Asegura que solo se vea una imagen a la vez en el carrusel */
     height: 560px; /* Ajusta esta altura según prefieras */
@@ -600,6 +614,23 @@ body {
     justify-content: center;
     overflow: hidden;
 }
+
+.carousel-videos .video {
+    min-width: 100%; /* Asegura que cada video ocupe el 100% del carrusel */
+    height: 100%; /* Ajusta la altura según prefieras */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Asegura que no haya desbordamiento */
+}
+
+video {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Ajusta la proporción de los videos */
+    border-radius: 5px;
+}
+
 
 .carousel-images .image img {
     width: 100%;
@@ -761,5 +792,26 @@ input[type="radio"]:nth-of-type(7):checked ~ .carousel-indicators label:nth-of-t
 .details-button {
     cursor: pointer;
 }
+
+.carousel-videos {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-videos .video {
+    min-width: 100%; /* Cada video ocupa toda la pantalla */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-videos video {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 5px;
+}
+
 
 
