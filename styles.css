@@ -896,5 +896,52 @@ input[type="radio"]:nth-of-type(7):checked ~ .carousel-indicators label:nth-of-t
 
 }
 
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    .project-cards {
+        gap: 1rem; /* Reduce el espacio entre tarjetas */
+    }
+
+    .project-card.m2 {
+        width: calc(100% - 1rem); /* Ocupa todo el ancho disponible */
+        max-width: 100%; /* Sin límite de ancho */
+    }
+
+    .project-card h3.logo {
+        font-size: 1.2rem; /* Reduce el tamaño del título */
+    }
+
+    .project-card img {
+        width: 100%; /* Ocupa todo el ancho de la tarjeta */
+    }
+
+    .project-card .btn {
+        font-size: 0.9rem; /* Botones más pequeños */
+    }
+
+    #projects .section-title {
+        font-size: 1.2rem; /* Ajusta el tamaño del título principal */
+    }
+}
+
+@media (max-width: 480px) {
+    .project-card.m2 {
+        padding: 0.5rem; /* Menos padding en tarjetas */
+    }
+
+    .project-card img {
+        width: 100%;
+    }
+
+    .project-card h3.logo {
+        font-size: 1rem;
+    }
+
+    .project-card .btn {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
 
 
