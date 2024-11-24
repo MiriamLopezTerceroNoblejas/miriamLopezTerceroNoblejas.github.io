@@ -304,6 +304,8 @@ footer {
     padding: 1rem; /* Padding interno */
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto de hover */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ajusta el número de columnas según el ancho */
+
 }
 
 /* Mantener el efecto hover */
@@ -360,37 +362,70 @@ footer {
 }
 
 /* Responsividad */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .hero {
         flex-direction: column;
+    }
+
+    .hero-content {
         text-align: center;
+        flex-direction: column;
     }
 
-    .photo {
-        margin-bottom: 2rem; /* Ajustar el margen */
+    .hero-text {
+        margin-left: 0;
     }
 
-    .profile-card {
-        width: 100%; /* Asegurar que las tarjetas ocupen el 100% en móviles */
+    .project-cards {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        gap: 1rem;
     }
 
-    nav ul {
-        flex-direction: column; /* Cambiar a columna para pantallas pequeñas */
+    .project-cards {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     }
 
-    nav ul li {
-        margin: 10px 0; /* Ajustar el margen */
+    .contact-section {
+        padding: 2rem;
     }
 
-    #skills h2, #about h2, #formacion h2 {
-        font-size: 2rem; /* Tamaño más pequeño para títulos en móviles */
+    .hero-image {
+        width: 120px;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content {
+        padding: 1rem;
+    }
+
+    .hero-image {
+        width: 100px;
+    }
+
+    .project-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card img {
+        width: 90%; /* Ajuste adicional para pantallas muy pequeñas */
     }
 }
 
 .honor-box {
     display: inline-block;
     color: white;
-    font-size: 0.9rem;
+    font-size: 1,5rem;
     padding: 4px 8px;
     margin-left: 10px;
     border-radius: 5px;
@@ -459,7 +494,14 @@ body {
     height: auto;
     border-radius: 5px;
     margin-bottom: 1rem;
-}
+  }
+   .project-card.m2.proyecto-7 img{
+    width: 35%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+   }
+
   
   .project-card.m2 h3.logo {
     font-size: 2rem; /* Ajusta el tamaño del título */
@@ -642,8 +684,8 @@ video {
     width: 100%;
     height: 100%;
     object-fit: cover; /* Hace que la imagen se adapte sin distorsión */
-}
 
+}
 
 
 input[type="radio"] {
@@ -817,6 +859,17 @@ input[type="radio"]:nth-of-type(7):checked ~ .carousel-indicators label:nth-of-t
     max-width: 100%;
     max-height: 100%;
     border-radius: 5px;
+}
+
+#projects .section-title {
+    font-size: 1.6rem; /* Aumentamos el tamaño */
+    margin-bottom: 0.5rem;
+    color: #0077cc; /* Color azul */
+    font-weight: bold; /* Hacerlo en negrita para mayor visibilidad */
+    border-bottom: 2px solid #00aaff; /* Línea azul debajo del título */
+    padding-bottom: 0.2rem;
+    text-transform: uppercase; /* Poner en mayúsculas para mayor impacto */
+
 }
 
 

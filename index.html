@@ -29,7 +29,7 @@
                 <div class="hero-text" data-aos="fade-right">
                     <h1>¡Hola! Soy Miriam López-Tercero Noblejas</h1>
                     <p>Ingeniería Informática | Tecnologías de la Información</p>
-                    <a href="Miriam López-Tercero Noblejas (2).pdf" class="btn" target="_blank">Mi Curriculum</a>
+                    <a href="Miriam López-Tercero Noblejas (6).pdf" class="btn" target="_blank">Mi Curriculum</a>
                 </div>
             </div>
         </div>
@@ -196,7 +196,7 @@
 
 
 
-    
+
     <!DOCTYPE html>
     <html lang="es">
     <head>
@@ -206,8 +206,23 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <section id="projects">
+        <section id="projects" data-aos="fade-right">
             <h2>Mis Proyectos</h2>
+
+            <!-- Sección de Méritos -->
+            <h2 class="section-title">Méritos</h2>
+            <div class="project-cards">
+                <div class="project-card m2 proyecto-7">
+                    <img src="portfolio/Digital_Builders/Captura desde 2024-11-24 18-48-51.png" alt="Proyecto 1">
+                    <h3>NTT Data Digital Builders</h3>
+                    <label for="modal-toggle-7" class="btn details-button">Ver detalles</label>
+                    <a href="https://www.linkedin.com/posts/ntt-data-europe-latam_digitalbuilders-nttdataespaaeha-nttdatadigitallovers-activity-7265689516881891328-uYNN/?utm_source=combined_share_message&utm_medium=ios_app&utm_campaign=whatsapp" target="_blank" class="btn github-button">Ver en Linkedin</a>
+                </div>
+                
+                </ul>
+            </div>
+            <!-- Sección de Portfolio -->
+            <h2 class="section-title">Portfolio</h2>
             <div class="project-cards ">
                 <div class="project-card m2 proyecto-3">
                     <img src="portfolio/alzheimer/logo.png" alt="Proyecto 1">
@@ -238,9 +253,15 @@
 
                 <div class="project-card m2 proyecto-3">
                     <img src="portfolio/pokemon_conjunto/logo.png" alt="Proyecto 5">
-                    <h3>AlzheimerAtlas</h3>
+                    <h3>IPokemon</h3>
                     <label for="modal-toggle-5" class="btn details-button">Ver detalles</label>
                     <a href="https://github.com/AgustinESI/ipo2-pokedex.git" target="_blank" class="btn github-button">Ver en GitHub</a>
+                </div>
+
+                <div class="project-card m2 proyecto-3">
+                    <img src=" " alt="Proyecto 5">
+                    <h3>Clinica Fisioterapia</h3>
+                    <label for="modal-toggle-6" class="btn details-button">Ver detalles</label>
                 </div>
 
             </div>
@@ -451,6 +472,61 @@
             El combate podría hacerse eligiendo dos pokemons o ser contra la máquina. 
             Se realizó también un minijuego de cartas donde había que asignar la foto del pokemon al nombre.
             Por útlimo, se tuvo en cuenta la accesibilidad, implementando un lector de voz y se añadieron un traductor al inglés y un modo oscuro.</p>
+        </div>
+    </div>
+</div>
+
+ <!-- Modal para el Proyecto 6 -->
+ <input type="checkbox" id="modal-toggle-6" class="modal-toggle">
+ <div class="modal">
+     <div class="modal-content">
+         <label for="modal-toggle-6" class="close">&times;</label>
+         <div class="carousel">
+             <!-- Botones de navegación -->
+             <button class="carousel-button prev-button">&larr; Anterior</button>
+             <div class="carousel-images">
+                <div class="image"><img src="portfolio/IPO_1/Entrada.png" alt="Pestaña Recursos"></div>
+                 <div class="image"><img src="portfolio/IPO_1/pacientes.png" alt="Portada"></div>
+                 <div class="image"><img src="portfolio/IPO_1/pacientes2.png" alt="Pestaña Información"></div>
+                 <div class="image"><img src="portfolio/IPO_1/historial.png" alt="Juego Simón Dice"></div>
+                 <div class="image"><img src="portfolio/IPO_1/dibujar.png" alt="Juego Preguntas y Respuestas"></div>
+                 <div class="image"><img src="portfolio/IPO_1/citas.png" alt="Juego Encontrar Parejas"></div>
+                 <div class="image"><img src="portfolio/IPO_1/personal.png" alt="Juego Asociar la Imagen"></div>
+
+
+             </div>
+             <button class="carousel-button next-button">Siguiente &rarr;</button>
+         </div>
+         <div class="project-description">
+             <p><strong>Nombre:</strong> Clínica Fisioterapia</p>
+             <p><strong>Asignatura:</strong> Integración Persona Ordeandor 1</p>
+             <p><strong>Grupo:</strong> 3 Personas</p>
+             <p><strong>Descripción</strong> Se desarrolló una aplicación para la gestión una clínica de fisioterpía. Se debían de controlar sus pacientes, incluyendo 
+            opciones para editar sus datos, añadir o elimianr los pacientes. También debía de haber un apartado para el historial de cada paciente, donde se podían añadir 
+            fotos y una opción de "pantalla" para dibujar sobre estas. Además, habría una pantalla de citas y otra de personal, con las mismas fncionalidades que en la ventana de 
+            pacientes.
+            Cabe destacar que en todas las ventanas había una trazabilidad, donde por ejemplo, si se selecciona en la ventana de pacientes una cita, se te redirige directamente a la ventana citas
+            con dicha cita seleccionada.
+            Por último, también existe un registro de diferentes usuarios, cada uno con sus claves y su información personal.</p>
+         </div>
+     </div>
+ </div>
+
+ <input type="checkbox" id="modal-toggle-7" class="modal-toggle">
+<div class="modal">
+    <div class="modal-content">
+        <label for="modal-toggle-7" class="close">&times;</label>
+        <div class="carousel">
+            <div class="carousel-images">
+                <div class="image"><img src="portfolio/Digital_Builders/principal.jpeg" alt="Portada"></div>
+
+            </div>
+
+        </div>
+        <div class="project-description">
+            <p><strong>Nombre:</strong>NTT Data Digital Builders </p>
+            <p><strong>Grupo:</strong> 5 Personas</p>
+            <p><strong>Descripción</strong> Ganadores de la 2º Edición de Digital Builders realizado por NTT Data.</p>
         </div>
     </div>
 </div>
