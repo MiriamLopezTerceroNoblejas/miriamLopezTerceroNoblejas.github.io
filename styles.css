@@ -537,9 +537,6 @@ footer {
 
 
 
-
-
-
 body {
     font-family: Arial, sans-serif;
 }
@@ -547,6 +544,7 @@ body {
 #projects {
     padding: 20px;
 }
+
 
 .project-cards {
     display: flex; /* Hace que los elementos se alineen en una fila */
@@ -610,6 +608,8 @@ body {
     width: 80%;
     text-align: center;
   }
+
+
   
   .project-card.m2::before,
   .project-card.m2::after {
@@ -637,6 +637,7 @@ body {
     filter: blur(2vmin);
     animation: blur-animation 3s ease-in-out alternate infinite;
   }
+
   
   @keyframes blur-animation {
     to {
@@ -663,6 +664,36 @@ body {
     color: #ffffff; 
 }
 
+
+/* Estilo responsive para dispositivos pequeños */
+@media (max-width: 768px) {
+    .project-cards {
+        flex-direction: column; /* Apilar las tarjetas verticalmente */
+        align-items: center; /* Centrar las tarjetas */
+        gap: 1.5rem; /* Separación entre tarjetas */
+    }
+
+    .project-card.m2 {
+        width: 80%; /* Hacer las tarjetas más grandes en móviles */
+        height: auto; /* Dejar que la altura se ajuste */
+        padding: 1rem;
+    }
+
+    .project-card.m2 img {
+        width: 100%; /* Las imágenes ocupan todo el ancho de las tarjetas */
+        height: auto; /* Mantener la proporción de la imagen */
+        margin-bottom: 1rem;
+    }
+
+    .project-card.m2 h3.logo {
+        font-size: 1.2rem; /* Ajustar el tamaño del título */
+    }
+
+    .project-card.m2 .btn {
+        font-size: 1rem; /* Hacer los botones más grandes */
+        width: 100%; /* Los botones ocupan todo el ancho de la tarjeta */
+    }
+}
 
 
 
