@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portafolio profesional de [Miriam López-Tercero Noblejas], desarrolladora informática">
-    <title>Portafolio - [Miriam López-Tercero Noblejas]</title>
+    <title>Miriam López-Tercero Noblejas</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
@@ -12,7 +12,13 @@
 <body>
     <header>
         <nav class="navbar">
-            <ul>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <ul class="menu">
                 <li><a href="#about">Sobre mí</a></li>
                 <li><a href="#formacion">Formación</a></li> 
                 <li><a href="#skills">Habilidades</a></li>
@@ -22,7 +28,6 @@
         </nav>
         <div class="hero">
             <div class="hero-content">
-
                 <div class="photo">
                     <img src="foto_recortada.jpeg" alt="Foto de Miriam" class="hero-image">
                 </div>
@@ -34,6 +39,7 @@
             </div>
         </div>
     </header>
+    
     
 
     <!-- Secciones -->
@@ -259,7 +265,7 @@
                 </div>
 
                 <div class="project-card m2 proyecto-3">
-                    <img src=" " alt="Proyecto 5">
+                    <img src="portfolio/IPO_1/portada.jpeg" alt="Proyecto 5">
                     <h3>Clinica Fisioterapia</h3>
                     <label for="modal-toggle-6" class="btn details-button">Ver detalles</label>
                 </div>
