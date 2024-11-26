@@ -806,8 +806,77 @@ video {
 .carousel-images .image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Hace que la imagen se adapte sin distorsión */
+    object-fit: contain; /* Asegura que la imagen se vea completa sin distorsión */
 
+
+}
+
+
+
+/* Estilos responsivos para móviles */
+@media (max-width: 768px) {
+
+    /* Adaptar el carrusel para que se ajuste mejor en dispositivos pequeños */
+    .carousel {
+        margin-right: 0; /* Elimina el margen derecho */
+        height: auto; /* Deja que la altura se ajuste automáticamente */
+    }
+
+    .carousel-images .image {
+        height: auto; /* Deja que la altura de las imágenes se ajuste según el contenido */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    /* Coloca los botones debajo de la imagen */
+    .carousel-button {
+        position: static; /* Elimina la posición fija */
+        margin: 10px auto; /* Centra los botones y agrega un pequeño margen */
+        display: block; /* Hace que los botones se muestren como bloques */
+        background-color: rgba(0, 0, 0, 0.6);
+        color: white;
+        font-size: 16px;
+    }
+
+    .prev-button, .next-button {
+        margin: 10px auto; /* Asegura que los botones de navegación estén centrados */
+        display: block;
+    }
+
+    /* Asegúrate de que la descripción también se vea correctamente */
+    .project-description {
+        flex: 1;
+        padding: 10px; /* Reduce el padding para mejor ajuste en pantallas pequeñas */
+        margin-left: 0;
+        margin-top: 20px; /* Separa la descripción de la imagen */
+        font-size: 14px; /* Ajusta el tamaño del texto para mejor legibilidad */
+        text-align: justify;
+        max-height: none; /* Elimina el límite de altura para que la descripción ocupe más espacio si es necesario */
+    }
+
+    /* Ajusta la imagen en el carrusel para que no se corte */
+    .carousel-images .image img {
+        width: 100%; /* Hace que la imagen ocupe todo el contenedor */
+        height: auto; /* Mantiene la proporción de la imagen */
+        object-fit: contain; /* Asegura que la imagen se vea completa sin recorte */
+    }
+
+    /* Ajustes de los botones de navegación */
+    .carousel-button {
+        position: static;
+        margin: 10px 0;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: white;
+        padding: 8px 16px;
+        border-radius: 5px;
+        font-size: 14px; /* Tamaño de texto reducido en móviles */
+    }
+
+    .carousel-button:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
 }
 
 
@@ -995,52 +1064,6 @@ input[type="radio"]:nth-of-type(7):checked ~ .carousel-indicators label:nth-of-t
 
 }
 
-/* Media Queries para pantallas pequeñas */
-@media (max-width: 768px) {
-    .project-cards {
-        gap: 1rem; /* Reduce el espacio entre tarjetas */
-    }
-
-    .project-card.m2 {
-        width: calc(100% - 1rem); /* Ocupa todo el ancho disponible */
-        max-width: 100%; /* Sin límite de ancho */
-    }
-
-    .project-card h3.logo {
-        font-size: 1.2rem; /* Reduce el tamaño del título */
-    }
-
-    .project-card img {
-        width: 100%; /* Ocupa todo el ancho de la tarjeta */
-    }
-
-    .project-card .btn {
-        font-size: 0.9rem; /* Botones más pequeños */
-    }
-
-    #projects .section-title {
-        font-size: 1.2rem; /* Ajusta el tamaño del título principal */
-    }
-}
-
-@media (max-width: 480px) {
-    .project-card.m2 {
-        padding: 0.5rem; /* Menos padding en tarjetas */
-    }
-
-    .project-card img {
-        width: 100%;
-    }
-
-    .project-card h3.logo {
-        font-size: 1rem;
-    }
-
-    .project-card .btn {
-        font-size: 0.8rem;
-        padding: 0.4rem 0.8rem;
-    }
-}
 
 
 
