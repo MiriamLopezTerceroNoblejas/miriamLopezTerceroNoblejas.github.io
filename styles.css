@@ -245,6 +245,8 @@ footer {
     margin-bottom: 1rem;
 }
 
+
+
 /* Estilos de contacto */ 
 .contact-section {
     background-color: #1a1a1a; /* Azul oscuro de fondo */
@@ -559,7 +561,7 @@ body {
 .project-card.m2 {
     position: relative;
     width: 35vmin; /* Aumentamos el ancho */
-    height: 40vmin; /* Reducimos la altura */
+    height: 45vmin; /* Reducimos la altura */
     background: linear-gradient(135deg, #1e1e24 10%, #050505 60%);
     display: flex;
     flex-direction: column;
@@ -816,51 +818,64 @@ video {
 /* Estilos responsivos para móviles */
 @media (max-width: 768px) {
 
-    /* Adaptar el carrusel para que se ajuste mejor en dispositivos pequeños */
-    .carousel {
-        margin-right: 0; /* Elimina el margen derecho */
-        height: auto; /* Deja que la altura se ajuste automáticamente */
+    .modal-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #444;
+        border-radius: 10px;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        
     }
 
+    .carousel {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 0px;
+        height: 50vh; /* La altura será 50% de la ventana */
+
+        
+    }
+
+
+    /* Imagen ocupa todo el ancho */
     .carousel-images .image {
-        height: auto; /* Deja que la altura de las imágenes se ajuste según el contenido */
+        width: 100%; /* Imagen al 100% del contenedor */
         display: flex;
         justify-content: center;
         align-items: center;
         overflow: hidden;
     }
 
-    /* Coloca los botones debajo de la imagen */
-    .carousel-button {
-        position: static; /* Elimina la posición fija */
-        margin: 10px auto; /* Centra los botones y agrega un pequeño margen */
-        display: block; /* Hace que los botones se muestren como bloques */
-        background-color: rgba(0, 0, 0, 0.6);
-        color: white;
-        font-size: 16px;
-    }
-
-    .prev-button, .next-button {
-        margin: 10px auto; /* Asegura que los botones de navegación estén centrados */
-        display: block;
-    }
-
-    /* Asegúrate de que la descripción también se vea correctamente */
-    .project-description {
-        flex: 1;
-        padding: 10px; /* Reduce el padding para mejor ajuste en pantallas pequeñas */
-        margin-left: 0;
-        margin-top: 20px; /* Separa la descripción de la imagen */
-        font-size: 14px; /* Ajusta el tamaño del texto para mejor legibilidad */
-        text-align: justify;
-        max-height: none; /* Elimina el límite de altura para que la descripción ocupe más espacio si es necesario */
-    }
-
-    /* Ajusta la imagen en el carrusel para que no se corte */
     .carousel-images .image img {
-        width: 100%; /* Hace que la imagen ocupe todo el contenedor */
-        height: auto; /* Mantiene la proporción de la imagen */
-        object-fit: contain; /* Asegura que la imagen se vea completa sin recorte */
+        width: 100%; /* Asegura que la imagen sea responsiva */
+        height: auto; /* Mantiene proporciones */
+        object-fit: contain;
+        
+    }
+
+    /* Botones debajo de la imagen */
+    .prev-button, .next-button {
+        margin: 10px 0; /* Espaciado entre botones */
+        display: inline-block;
+        text-align: center;
+        padding: 10px 20px;
+        width: auto; /* Tamaño ajustable de botones */
+    }
+
+    /* Descripción ocupa todo el ancho */
+    .project-description {
+        margin-top: 20px; /* Espaciado con respecto al carrusel */
+        width: calc(100% - 40px); /* Ajusta al ancho total menos el padding */
+        max-width: 100%; /* Evita desbordes */
     }
 
     /* Ajustes de los botones de navegación */
@@ -872,12 +887,22 @@ video {
         padding: 8px 16px;
         border-radius: 5px;
         font-size: 14px; /* Tamaño de texto reducido en móviles */
+        margin: 0; /* Elimina márgenes adicionales */
+        display: inline-block; /* Evita que se comporten como bloques grandes */
     }
+
 
     .carousel-button:hover {
         background-color: rgba(0, 0, 0, 0.8);
     }
+
+    .carousel, .project-description {
+        margin: 0; /* Elimina márgenes */
+        padding: 0; /* Elimina relleno */
+    }
+ 
 }
+
 
 
 input[type="radio"] {
