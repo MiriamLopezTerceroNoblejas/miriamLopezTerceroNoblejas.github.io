@@ -554,14 +554,13 @@ body {
     flex-wrap: wrap; /* Permite que los proyectos se ajusten en varias filas si es necesario */
     justify-content: center; /* Centra los proyectos en la página */
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajusta automáticamente el número de columnas */
-
   }
 
 
 .project-card.m2 {
     position: relative;
     width: 35vmin; /* Aumentamos el ancho */
-    height: 45vmin; /* Reducimos la altura */
+    height: 50vmin; /* Reducimos la altura */
     background: linear-gradient(135deg, #1e1e24 10%, #050505 60%);
     display: flex;
     flex-direction: column;
